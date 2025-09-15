@@ -25,7 +25,7 @@ def index():
         with open(save_path, "wb") as f:
             f.write(encrypted_data)
 
-        flash(f"File {file.filename} uploaded and encrypted successfully!")
+        flash(f"File {file.filename} has been uploaded and encrypted successfully!")
         return redirect(url_for("index"))
 
     files = os.listdir(UPLOAD_FOLDER)
