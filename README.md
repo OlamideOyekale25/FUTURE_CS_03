@@ -13,7 +13,7 @@ A simple Flask web application that lets you upload files and automatically encr
 
 1. **Clone this repo**
    ```bash
-   git clone https://github.com/userIssa/FUTURE_CS_03.git
+   git clone https://github.com/OlamideOyekale25/FUTURE_CS_03.git
    cd FUTURE_CS_03
    ```
 
@@ -58,3 +58,4 @@ This project was developed as an educational exercise to demonstrate:
 - Integration of encryption libraries in Python
 
 **Important Note**: This implementation is designed for learning purposes. Production deployments would require additional security measures including proper key management systems, user authentication, HTTPS implementation, and comprehensive access controls.
+
