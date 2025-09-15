@@ -1,94 +1,60 @@
-# FUTURE_CS_03
-# 🔐 Secure File Sharing System  
+# 🛡️ File Encryption Web App
 
-A simple yet secure **file sharing system** built with **Flask** and **AES encryption**.  
-Users can:  
-- Upload files (automatically encrypted using AES-256).  
-- Download either the **encrypted** version or the **decrypted original**.  
+A simple Flask web application that lets you upload files and automatically encrypts them using AES-256 encryption.
 
-This project simulates real-world secure file transfer in environments like healthcare, corporate, and legal industries where **data security is critical**.  
+## 🎯 What it does
 
----
+- Upload any file through a web interface
+- Files get encrypted automatically when uploaded
+- Download either the encrypted version or get the original file back (decrypted)
+- Clean, simple web interface
 
-## ✨ Features  
-- ✔ Secure file **upload & encryption** (AES-256, CBC mode)  
-- ✔ Download **encrypted** files for secure storage or sharing  
-- ✔ Download **decrypted** files to restore the original content  
-- ✔ Simple, clean **Bootstrap interface**  
-- ✔ No decrypted files are stored on the server, they are streamed to the user directly  
+## 🚀 How to run it
 
----
+1. **Clone this repo**
+   ```bash
+   git clone https://github.com/userIssa/FUTURE_CS_03.git
+   cd FUTURE_CS_03
+   ```
 
-## 📂 Project Structure
-```bash
-secure_file_share/
-│── app.py # Flask app (routes & logic)
-│── encryption.py # AES encryption & decryption functions
-│── uploads/ # Stores encrypted files
-│── templates/
-  └── index.html # Web UI
-```
+2. **Set up virtual environment (Not compulsory but Recommended)**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
----
+3. **Install requirements**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## 🚀 Getting Started  
+4. **Run the app**
+   ```bash
+   python app.py
+   ```
 
-### 1️⃣ Clone the repository
-```bash
-git clone https://github.com/userIssa/FUTURE_CS_03.git
-cd FUTURE_CS_03
-```
+5. **Open your browser** and go to `http://localhost:5000`
 
-### 2️⃣ Create a virtual environment (recommended)
-```bash
-python3 -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
-```
+## 📁 Files in this project
 
-### 3️⃣ Install dependencies
-```bash
-pip install flask pycryptodome
-```
+- `app.py` - Main Flask application with routes
+- `encryption.py` - Handles AES encryption and decryption
+- `templates/index.html` - Web page interface
+- `requirements.txt` - Python packages needed
+- `uploads/` - Where encrypted files are stored
 
-### 4️⃣ Run the app
-```bash
-python app.py
-```
-### 5️⃣ Open in browser
-Go to: http://127.0.0.1:5000
+## How the encryption works
 
----
+- Uses AES-256 encryption in CBC mode
+- Each file gets a random IV (initialization vector)
+- Only encrypted files are saved to disk
+- When you download the "decrypted" version, it decrypts the file in memory and sends it to you
 
-## 🔑 Security Overview
-- Encryption Algorithm: AES-256 in CBC mode
-- Key Handling: A single static key (for demo purposes)
-- In production, keys should be managed with a Key Management System (KMS) or environment variables
-- IV Handling: Each file uses a random IV, stored alongside the ciphertext
-- Decryption: Performed in memory and streamed back to the client
+## ⚠️ Academic Purpose & Disclaimer
 
----
+This project was developed as an educational exercise to demonstrate:
+- Practical application of cryptographic algorithms
+- Secure web application development principles
+- Integration of encryption libraries in Python
 
-## 🛠 Tools Used
-Flask
- – Web framework
-PyCryptodome
- – AES encryption
-Bootstrap 5
- – Frontend styling
-
- ---
-
- ## 📹 Deliverables
- - GitHub repository with clean, commented code
- - Walkthrough video showing file upload, encryption, and download
- - Security overview document (this README’s Security Overview section)
-
---- 
-
-## ⚠️ Disclaimer
-This project is for educational purposes only.
-For production use, implement:
-- Strong key management (e.g., AWS KMS, HashiCorp Vault)
-- Authentication & access control
-- HTTPS for secure transport
+**Important Note**: This implementation is designed for learning purposes. Production deployments would require additional security measures including proper key management systems, user authentication, HTTPS implementation, and comprehensive access controls.
