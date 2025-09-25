@@ -1,4 +1,4 @@
-# 🛡️ File Encryption Web App
+# 🛡️ Secure File Sharing System (Flask + AES)
 
 A simple Flask web application that lets you upload files and automatically encrypts them using AES-256 encryption.
 
@@ -50,12 +50,13 @@ A simple Flask web application that lets you upload files and automatically encr
 - Only encrypted files are saved to disk
 - When you download the "decrypted" version, it decrypts the file in memory and sends it to you
 
-## ⚠️ Academic Purpose & Disclaimer
+## ⚠️ Disclaimer
 
-This project was developed as an educational exercise to demonstrate:
+This project was developed as an educational exercise for future interns to demonstrate:
 - Practical application of cryptographic algorithms
 - Secure web application development principles
 - Integration of encryption libraries in Python
 
 **Important Note**: This implementation is designed for learning purposes. Production deployments would require additional security measures including proper key management systems, user authentication, HTTPS implementation, and comprehensive access controls.
+
 
